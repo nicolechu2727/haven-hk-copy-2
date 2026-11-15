@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cb4ajhllhbuj0"]
+
+[ext_resource type="Script" uid="uid://dom5fscwsqlrt" path="res://sushi.gd" id="1_si702"]
+[ext_resource type="Texture2D" uid="uid://daghlimou1vtk" path="res://IMG_4324-removebg-preview.png" id="2_bqr66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3p2m6"]
+size = Vector2(104, 45)
+
+[node name="sushi" type="Area2D" unique_id=1621550469]
+script = ExtResource("1_si702")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1837007433]
+position = Vector2(725.5, 89)
+scale = Vector2(0.33843538, 0.374359)
+texture = ExtResource("2_bqr66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1606165177]
+visible = false
+position = Vector2(725.49994, 91)
+shape = SubResource("RectangleShape2D_3p2m6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
